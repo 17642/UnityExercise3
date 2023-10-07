@@ -25,15 +25,15 @@ public class Force : MonoBehaviour
     {
         //rigid.velocity = new Vector3(2, 4, 3);//물리 관련 함수는 FixedUpdate에 설정
 
-        //if(Input.GetButtonDown("Jump"))//Jump 키를 누르면
-        //    rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);//위 방향으로 5의 힘을 가함.(점프)
+        if(Input.GetButtonDown("Jump"))//Jump 키를 누르면
+            rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);//위 방향으로 5의 힘을 가함.(점프)
         //Debug.Log(rigid.velocity);//속력 표시
-        //Vector3 vec = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        //rigid.AddForce(vec,ForceMode.Impulse);//힘을 가해서 이동.
+        Vector3 vec = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        rigid.AddForce(vec,ForceMode.Impulse);//힘을 가해서 이동.
 
         //회전력//
 
-        rigid.AddTorque(Vector3.down);//돌리기
+        //rigid.AddTorque(Vector3.down);//돌리기
         //벡터를 축으로 해서 회전함.
         
 
