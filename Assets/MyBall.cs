@@ -29,4 +29,9 @@ public class MyBall : MonoBehaviour
         if(other.name=="EnterCube")
             rigid.AddForce(Vector3.up*5,ForceMode.Impulse);
     }
+
+    public void Jump()//외부 컴포넌트에서 접근해야 하므로 Public 사용
+    {
+        rigid.AddForce(Vector3.up*10, ForceMode.Impulse);
+    }
 }
